@@ -3,7 +3,7 @@ import { StyleSheet, Text, View,SafeAreaView,Button,Dimensions,Modal,Alert } fro
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./components/Home";
- import LoanHippo from "./components/LoanHippo";
+ import MoneyTransfer from "./components/MoneyTransfer";
  import RequestLoan from "./components/RequestLoan";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
@@ -15,6 +15,10 @@ import Tnd  from "./components/Tnd";
 import Fg  from "./components/Fg";
 import Payloan  from "./components/Payloan";
 import Successful  from "./components/Successful";
+import Momo  from "./components/Momo";
+import Otp  from "./components/Otp";
+import Withdraw from './components/Withdraw';
+import Bills from './components/Bills';
 
 
  
@@ -30,7 +34,7 @@ const App = (props) => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={Home} options={{headerShown:false}} />
-         <Stack.Screen name="LoanHippo" component={LoanHippo} options={{headerShown:false}} />
+         <Stack.Screen name="MoneyTransfer" component={MoneyTransfer} options={{headerShown:false}} />
          <Stack.Screen name="RequestLoan" component={RequestLoan} options={{headerShown:false}}/>
          <Stack.Screen name="Signup" component={Signup} options={{headerShown:false}}/>
          <Stack.Screen name="Login" component={Login} options={{headerShown:false}}/>
@@ -42,6 +46,10 @@ const App = (props) => {
          <Stack.Screen name="Fg" component={Fg} options={{headerShown:false}}/>
          <Stack.Screen name="Payloan" component={Payloan} options={{headerShown:false}}/>
          <Stack.Screen name="Successful" component={Successful} options={{headerShown:false}}/>
+         <Stack.Screen name="Momo" component={Momo} options={{headerShown:false}}/>
+         <Stack.Screen name="Otp" component={Otp} options={{headerShown:false}}/>
+         <Stack.Screen name="Withdraw" component={Withdraw} options={{headerShown:false}}/>
+         <Stack.Screen name="Bills" component={Bills} options={{headerShown:false}}/>
 
       
        </Stack.Navigator> 

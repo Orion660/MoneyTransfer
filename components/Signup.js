@@ -2,39 +2,45 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,SafeAreaView,Button, TouchableOpacity, Image, ImageBackground, TextInput,} from 'react-native';
 import React from "react";
 import { AntDesign, MaterialIcons, Entypo, FontAwesome5,  } from '@expo/vector-icons';
-import bck2 from '../assets/bck2.jpg';
+import fo3 from '../assets/fo3.jpg';
 
 
 
 const Signup =(props)=>{
     return(
-      <ImageBackground source={bck2} style={styles.container}>
+      <ImageBackground source={fo3} style={styles.container}>
         <View  style={styles.container}>
              <View style={{ alignItems: "center",
-            justifyContent: "center",  backgroundColor: "white",}}>
-            <Text style={{fontSize: 30, color: "#8A39E1", top: 20,  backgroundColor: "white",}}>SIGN UP</Text>
+            justifyContent: "center",   flex: 30,}}>
+            <Text style={{fontSize: 30, color: "black", top: 20,}}>Create a free account</Text>
             </View>
 
 <View style={styles.profileContainer}>
           <Text style={{color: "'#c9c7c7", fontSize: 20, marginVertical: 2,marginLeft: 20,}}>
-            Username
+            First Name
             </Text>
           <TextInput style={{fontSize: 15, marginVertical: 2, borderBottomWidth: 1, marginLeft: 20, marginRight: 20,}}/>
 
           <Text style={{color: "'#c9c7c7", fontSize: 20, marginVertical: 2, marginLeft: 20,}}>
-            Email
+            Middle Name
             </Text>
           <TextInput style={{fontSize: 15, marginVertical: 2, borderBottomWidth: 1, marginLeft: 20, marginRight: 20,}}/>
 
           <Text style={{color: "'#c9c7c7", fontSize: 20, marginVertical: 2, marginLeft: 20,}}>
-            Password
+            Last Name
             </Text>
           <TextInput style={{fontSize: 15, marginVertical: 2, borderBottomWidth: 1, marginLeft: 20, marginRight: 20,}}/>
 
           <Text style={{color: "black", fontSize: 20, marginVertical: 2, marginLeft: 20,}}>
-            Confim password
+            Create password
             </Text>
           <TextInput style={{fontSize: 15, marginVertical: 2, borderBottomWidth: 1, marginLeft: 20, marginRight: 20,}}/>
+          <Text style={{paddingLeft:20,}}>6 characters containing a lowercase letter, uppercase letter and a number</Text>
+          <Text style={{color: "black", fontSize: 20, marginVertical: 2, marginLeft: 20, top: 10, }}>
+            Confim password
+            </Text>
+          <TextInput style={{fontSize: 15, top:10,  marginVertical: 2, borderBottomWidth: 1, marginLeft: 20, marginRight: 20,}}/>
+         
           </View>
           <View style={styles.outerContainer}>
           
@@ -52,10 +58,10 @@ const Signup =(props)=>{
           </View>         
      </View>
 
-     <View style={styles.last}>
+     {/* <View style={styles.last}>
              <Text style={{fontSize: 20, paddingLeft: 20,}}>LoanHippo</Text>
              <Text style={{paddingRight:20,}}><FontAwesome5 name="hippo" size={40} color="black" /></Text>
-         </View>
+         </View> */}
 
       </View>
       </ImageBackground>
@@ -96,12 +102,11 @@ const Signup =(props)=>{
             alignItems: "center",
           },
           profileContainer:{
-            flex:25,
-             backgroundColor:"white",
-             top: 30,
+            flex:40,
+             top: 20,
           },
           outerContainer:{
-            flex:40,
+            flex:15,
             marginHorizontal: 50,
             
         

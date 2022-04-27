@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,SafeAreaView,Button, TouchableOpacity, Image, ImageBackground, } from 'react-native';
 import React from "react";
 import { AntDesign, MaterialIcons, Entypo,FontAwesome5  } from '@expo/vector-icons';
-import bck2 from '../assets/bck2.jpg';
+import fo3 from '../assets/fo3.jpg';
 
 
 
@@ -10,65 +10,50 @@ import bck2 from '../assets/bck2.jpg';
 
 const Home =(props)=>{
     return(
-        <ImageBackground source={bck2} style={styles.container}>
+        <ImageBackground source={fo3} style={styles.container}>
         <View  style={styles.container}>
             <View style={styles.name}>
-                <Text>
-            <Image style= {styles.lov} source={require("../assets/L.jpg")}></Image>
-            </Text>
-            <Text>
-            <Image style= {styles.lov} source={require("../assets/O.jpg")}></Image>
-            </Text>
-            <Text>
-            <Image style= {styles.lov} source={require("../assets/A.jpg")}></Image>
-            </Text>
-            <Text>
-            <Image style= {styles.lov} source={require("../assets/N.jpg")}></Image>
-            </Text>
-            <Text>
-            <Image style= {styles.lov} source={require("../assets/H.jpg")}></Image>
-            </Text>
-            <Text>
-            <Image style= {styles.lov} source={require("../assets/I.jpg")}></Image>
-            </Text>
-            <Text>
-            <Image style= {styles.lov} source={require("../assets/P.jpg")}></Image>
-            </Text>
-            <Text>
-            <Image style= {styles.lov} source={require("../assets/P.jpg")}></Image>
-            </Text>
-            <Text>
-            <Image style= {styles.lov} source={require("../assets/O.jpg")}></Image>
-            </Text>
+
+
+            <Text style={{fontWeight:"bold", fontSize: 20, color: "black",}}>Ayoba Transfer</Text>
             </View>
 
 
 
 
             <View style={styles.contacts}>
-            <Image style= {styles.hip} source={require("../assets/mc.jpg")}></Image>
+            <Image style= {styles.hip} source={require("../assets/mt.jpg")}></Image>
             </View>
 
             <View style={styles.get}>
-            <TouchableOpacity onPress={()=>{props.navigation.navigate("LoanHippo")}}>
-                <Text style={{fontWeight:"bold", fontSize: 20, color: "black",}}>Apply Now </Text>
+            <TouchableOpacity style={styles.btn1} onPress={()=>{props.navigation.navigate("Signup")}}>
+                {/* <Text style={{fontWeight:"bold", fontSize: 20, color: "black",}}>Apply Now </Text> */}
                 {/* <Text>
                 <AntDesign name="arrowright" size={24} color="white" />
                 </Text> */}
+                 <Text style={{ color: "black" }}>i have an account</Text>
                 </TouchableOpacity>
             </View>
-            <View style={{justifyContent: "center",
+
+            <View style={styles.get1}>
+            <TouchableOpacity style={styles.btn} onPress={()=>{props.navigation.navigate("Login")}}>
+                {/* <Text style={{fontWeight:"bold", fontSize: 20, color: "black",}}>Apply Now </Text> */}
+                {/* <Text>
+                <AntDesign name="arrowright" size={24} color="white" />
+                </Text> */}
+                 <Text style={{ color: "white" }}>Open free account</Text>
+                </TouchableOpacity>
+            </View>
+
+            {/* <View style={{justifyContent: "center",
             alignItems: "center",
             fontSize: 20,
             fontWeight: "bold", 
             top: 450,}}>
             <Text style={styles.round}></Text>
-            </View>
+            </View> */}
 
-            <View style={styles.last}>
-             <Text style={{fontSize: 20, paddingLeft: 20,}}>LoanHippo</Text>
-             <Text style={{paddingRight:20,}}><FontAwesome5 name="hippo" size={40} color="black" /></Text>
-         </View>
+            
 
         </View>
         </ImageBackground>
@@ -124,10 +109,20 @@ const Home =(props)=>{
               alignItems: "center",
             fontSize: 20,
             fontWeight: "bold", 
-            top: 450,
+            top: 480,
             flexDirection: "row",
             
         },
+
+        get1: {
+            justifyContent: "center",
+             alignItems: "center",
+           fontSize: 20,
+           fontWeight: "bold", 
+           top: 350,
+           flexDirection: "row",
+           
+       },
 
         round: {
             width: 180,
@@ -145,6 +140,29 @@ const Home =(props)=>{
             
             
                  },
+
+                 btn: {
+                    padding: 16,
+                    width: "90%",
+                    borderRadius: 50,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: "#8A39E1",
+                    top: 15,
+                    marginLeft: 10,
+                    marginRight: 10,
+                  },
+                  btn1: {
+                    padding: 16,
+                    width: "90%",
+                    borderRadius: 50,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: "white",
+                    top: 15,
+                    marginLeft: 10,
+                    marginRight: 10,
+                  },
         
 
 

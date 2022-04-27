@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,SafeAreaView,Button, TouchableOpacity, Image, ImageBackground, TextInput,} from 'react-native';
 import React from "react";
 import { AntDesign, MaterialIcons, Entypo, FontAwesome5,  } from '@expo/vector-icons';
-import bck2 from '../assets/bck2.jpg';
+import fo3 from '../assets/fo3.jpg';
 
 
 
@@ -10,11 +10,12 @@ import bck2 from '../assets/bck2.jpg';
 const Login =(props)=>{
     return(
       
-      <ImageBackground source={bck2} style={styles.container}>
+      <ImageBackground source={fo3} style={styles.container}>
         <View  style={styles.container}>
              <View style={{ alignItems: "center",
-            justifyContent: "center", backgroundColor: "white",}}>
-            <Text style={{fontSize: 30, color: "#8A39E1", backgroundColor: "white", top: 20,}}>LOG IN</Text>
+            justifyContent: "center",  flex: 30,}}>
+            <Text style={{fontSize: 30, color: "#8A39E1",  top: 20,}}>Cross-channel payments</Text>
+            <Text style={{top: 30,}}>Simple. secure.fast and easy to use</Text>
             </View>
 
 <View style={styles.profileContainer}>
@@ -34,21 +35,23 @@ const Login =(props)=>{
      </View>
 
      <View style={styles.outerContainer}>
-     <TouchableOpacity style={styles.btn} onPress={()=>{props.navigation.navigate("Step1")}}>
+     <TouchableOpacity style={styles.btn} onPress={()=>{props.navigation.navigate("MoneyTransfer")}}>
           <Text style={{ color: "white" }}>Log In</Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={()=>{props.navigation.navigate("Signup")}}>
-        <Text style={styles.signup}> Don't have an account? 
+        <Text style={styles.signup}> Creat an account? 
         <Text style={styles.sign}>Signup</Text>
          </Text>
          </TouchableOpacity>
      </View>
 
-     <View style={styles.last}>
+     {/* <View style={styles.last}>
              <Text style={{fontSize: 20, paddingLeft: 20,}}>LoanHippo</Text>
              <Text style={{paddingRight:20,}}><FontAwesome5 name="hippo" size={40} color="black" /></Text>
          </View>
+
+      </View> */}
 
       </View>
       </ImageBackground>
@@ -89,11 +92,11 @@ const Login =(props)=>{
           },
           profileContainer:{
             flex:40,
-            top: 30,
+            top: 20,
             // backgroundColor:"white",
           },
           outerContainer:{
-            flex:20,
+            flex:15,
             marginHorizontal: 50,
         
           },

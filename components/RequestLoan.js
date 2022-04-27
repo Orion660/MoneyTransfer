@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TextInput, View,SafeAreaView,Button, Pressable, TouchableOpacity, Image, ImageBackground,Modal,  Alert, } from 'react-native';
-import React, {useState} from "react";
-import { AntDesign, MaterialIcons, Entypo, FontAwesome5,  } from '@expo/vector-icons';
-import bck2 from '../assets/bck2.jpg';
+import React, {use} from "react";
+import { AntDesign, MaterialIcons, Entypo, FontAwesome, Ionicons } from '@expo/vector-icons';
+import fo3 from '../assets/fo3.jpg';
 
 
 
@@ -12,67 +12,48 @@ import bck2 from '../assets/bck2.jpg';
 
 
 const RequestLoan =(props)=>{
-  const [modalVisible, setModalVisible] = useState(false);
     return(
-      <ImageBackground source={bck2} style={styles.container}>
+      <ImageBackground source={fo3} style={styles.container}>
         <View  style={styles.container}>
             <View style={styles.Request}>
-                <Text style={{ fontSize: 40, fontWeight: "bold", paddingLeft: 50, top: 10, color: "#8A39E1",}}>REQUEST-LOAN</Text> 
-
-                 {/* <Text style={{paddingRight:20, top: 10,}}><FontAwesome5 name="hippo" size={40} color="black" /></Text>  */}
+                <Text style={{ fontSize: 20, fontWeight: "bold", paddingLeft: 50, top: 10, color: "black",}}>Load Money From</Text> 
             </View>
+            
+            <TouchableOpacity style={styles.btn} onPress={()=>{props.navigation.navigate("Step1")}}>  
+  <View style={styles.money}>
+  <Text>
+  <Ionicons name="md-person-circle-sharp" size={40} color="black" />
+  </Text>
+  <Text style={{top: 10, fontSize: 20,}}>Mobile Money</Text>
+  <Text style={{top:10, paddingLeft: 160,}}>
+  <MaterialIcons name="arrow-forward-ios" size={24} color="black" />
+  </Text>
+  </View>
+  </TouchableOpacity>
 
-            <View style={styles.amount}>
-            <Text style={{paddingLeft: 50,  fontSize: 15,}}>Fast Loan You can Request An Amount From </Text> 
-            <Text  style={{paddingLeft: 2, fontSize: 15,}}>GHC 50 , GHC 100, GHC 150, GHC 200, GHC 250, GHC 300</Text>
-            <Text  style={{paddingLeft: 50, fontSize: 15,}}>  GHC 350, GHC 400, GHC 450, AND GHC 500 .</Text>
-            </View>
+
+  <TouchableOpacity style={styles.btn} onPress={()=>{props.navigation.navigate("Step1")}}>
+  <View style={{paddingLeft: 20, flexDirection: "row", backgroundColor: "white",top: 40,}}>
+  <Text style={{top:3,}}>
+  <FontAwesome name="bank" size={40} color="blue" />
+  </Text>
+  <Text style={{top: 10, fontSize: 20,}}>Bank</Text>
+  <Text style={{top:10, paddingLeft: 230,}}>
+  <MaterialIcons name="arrow-forward-ios" size={24} color="black" />
+  </Text>
+  </View>
+  </TouchableOpacity>
+
+
+<View style={{top: 300, justifyContent:"center", flexDirection:"row-reverse",}}>
+  <Text>secure & encrypted payment</Text>
+</View>
 
          
-            <View style={styles.terms}>
-            <Modal  animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => {
-          Alert.alert("Modal has been closed.");
-          setModalVisible(!modalVisible);
-        }}>
-           <View style={styles.centeredView}>
-            <View style={styles.modalView}>
-            <Text style={{paddingLeft: 10, fontSize: 20, top: 5, marginBottom: 15,
-    textAlign: "center"}}>There is a 30days for you to pay back your loan Thank you .</Text>
-            </View>
-            <Pressable
-              style={[styles.button, styles.buttonClose]}
-              onPress={() => setModalVisible(!modalVisible)}
-            >
-                <Text style={styles.textStyle}>close</Text>
-            </Pressable>
-          </View>
-      </Modal>
-      <Pressable
-        style={[styles.button, styles.buttonOpen]}
-        onPress={() => setModalVisible(true)}
-      >
-        <Text style={styles.textStyle}>Long Terms</Text>
-        <Text style={{color:"orange",paddingLeft: 70,}}>Touch Me</Text>
-      </Pressable>
-    </View>       
+
+         
+
         
-         <View>
-
-         </View>
-
-         <View style={styles.pic}>
-         <Image style= {styles.lov} source={require("../assets/hippo.jpg")}></Image>
-         </View>
-
-         <View style={styles.signin}>
-         <TouchableOpacity onPress={()=>{props.navigation.navigate("Signup")}}>
-          <Text style={{ paddingTop: 15, fontSize: 20, color: "white", justifyContent: "center", 
-          alignItems: "center", paddingLeft: 70, }}>SIGN UP</Text>
-            </TouchableOpacity>
-         </View>
 
            </View> 
            </ImageBackground>
@@ -91,8 +72,10 @@ const RequestLoan =(props)=>{
 
         Request:{
             flexDirection:"row",
-            justifyContent:"space-between",
-            top: 10,
+            justifyContent:"center",
+            paddingRight: 20,
+            flex: 0.10,
+            top: 30,
                  },
 
                  amount:{
@@ -104,6 +87,13 @@ const RequestLoan =(props)=>{
             top: 30,
             flex: 0.2,
             // backgroundColor: "black"
+        },
+
+        money:{
+          paddingLeft: 20,
+           flexDirection: "row", 
+           backgroundColor:"white", 
+           top: 20, 
         },
 
         // terms:{

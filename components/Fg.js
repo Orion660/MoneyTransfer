@@ -2,17 +2,17 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,SafeAreaView,Button, TouchableOpacity, Image, ImageBackground, TextInput,} from 'react-native';
 import React from "react";
 import { AntDesign, MaterialIcons, Entypo, FontAwesome5,  } from '@expo/vector-icons';
-import bck2 from '../assets/bck2.jpg';
+import fo3 from '../assets/fo3.jpg';
 
 
 
 const Fg =(props)=>{
     return(
-      <ImageBackground source={bck2} style={styles.container}>
+      <ImageBackground source={fo3} style={styles.container}>
         <View  style={styles.container}>
              <View style={{ alignItems: "center",
             justifyContent: "center",}}>
-            <Text style={{fontSize: 30, color: "#8A39E1",}}>Forget Password</Text>
+            <Text style={{fontSize: 30, color: "black", top: 40,}}>Forget Password</Text>
             </View>
 
 <View style={styles.profileContainer}>
@@ -23,11 +23,6 @@ const Fg =(props)=>{
 
           <Text style={{color: "'#c9c7c7", fontSize: 20, marginVertical: 2 , marginRight: 20, marginLeft: 20,}}>
             Phone number
-            </Text>
-          <TextInput style={{fontSize: 15, marginVertical: 2, borderBottomWidth: 1 , marginRight: 20, marginLeft: 20,}}/>
-
-          <Text style={{color: "'#c9c7c7", fontSize: 20, marginVertical: 2 , marginRight: 20, marginLeft: 20,}}>
-            Opt code:
             </Text>
           <TextInput style={{fontSize: 15, marginVertical: 2, borderBottomWidth: 1 , marginRight: 20, marginLeft: 20,}}/>
 
@@ -52,10 +47,7 @@ const Fg =(props)=>{
          
      </View>
 
-     <View style={styles.last}>
-             <Text style={{fontSize: 20, paddingLeft: 20,}}>LoanHippo</Text>
-             <Text style={{paddingRight:20,}}><FontAwesome5 name="hippo" size={40} color="black" /></Text>
-         </View>
+    
 
       </View>
       </ImageBackground>
@@ -97,6 +89,7 @@ const Fg =(props)=>{
           },
           profileContainer:{
             flex:40,
+            top: 100,
             // backgroundColor:"white",
           },
           outerContainer:{
