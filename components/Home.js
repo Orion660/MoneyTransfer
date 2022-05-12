@@ -45,13 +45,7 @@ const Home =(props)=>{
                 </TouchableOpacity>
             </View>
 
-            {/* <View style={{justifyContent: "center",
-            alignItems: "center",
-            fontSize: 20,
-            fontWeight: "bold", 
-            top: 450,}}>
-            <Text style={styles.round}></Text>
-            </View> */}
+
 
             
 
@@ -65,7 +59,7 @@ const Home =(props)=>{
     const styles = StyleSheet.create({
         container: {
           flex: 10,
-        //   backgroundColor: "#F194FF",
+           backgroundColor: "#e0ffff",
             height: null,
           width: null,
           

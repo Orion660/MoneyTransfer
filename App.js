@@ -19,6 +19,10 @@ import Momo  from "./components/Momo";
 import Otp  from "./components/Otp";
 import Withdraw from './components/Withdraw';
 import Bills from './components/Bills';
+import Dashboard from './components/dashboard';
+import Bank from './components/Bank';
+
+
 
 
  
@@ -50,6 +54,9 @@ const App = (props) => {
          <Stack.Screen name="Otp" component={Otp} options={{headerShown:false}}/>
          <Stack.Screen name="Withdraw" component={Withdraw} options={{headerShown:false}}/>
          <Stack.Screen name="Bills" component={Bills} options={{headerShown:false}}/>
+         <Stack.Screen name="Dashboard" component={Dashboard} options={{headerShown:false}}/>
+         <Stack.Screen name="Bank" component={Bank} options={{headerShown:false}}/>
+
 
       
        </Stack.Navigator> 

@@ -42,7 +42,7 @@ export default Otp;
 const styles = StyleSheet.create({
 container: {
 flex: 10,
-//   backgroundColor: "white",
+  backgroundColor: "#e0ffff",
 height: null,
 width: null,
 },

@@ -88,6 +88,7 @@ const Step2 =(props)=>{
               // 
               height: null,
               width: null,
+              backgroundColor:"#e0ffff",
             },
 
             lov:{

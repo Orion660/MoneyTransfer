@@ -92,7 +92,7 @@ export default Step1;
 const styles = StyleSheet.create({
     container: {
       flex: 10,
-      // backgroundColor: "#F194FF",
+       backgroundColor: "#e0ffff",
       height: null,
       width: null,
     },

@@ -2,13 +2,12 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,SafeAreaView,Button, TouchableOpacity, Image, ImageBackground, TextInput,} from 'react-native';
 import React from "react";
 import { AntDesign, MaterialIcons, Entypo, FontAwesome5, Ionicons, } from '@expo/vector-icons';
-import fo3 from '../assets/fo3.jpg';
 
 
 
 const Successful =(props)=>{
     return(
-<ImageBackground source={fo3} style={styles.container}>
+<ImageBackground style={styles.container}>
 
         <View  style={styles.container}>
            
@@ -93,7 +92,7 @@ export default Successful;
 const styles = StyleSheet.create({
 container: {
   flex: 10,
-//   backgroundColor: "white",
+ backgroundColor: "#e0ffff",
 height: null,
   width: null,
 },

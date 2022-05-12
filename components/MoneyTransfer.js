@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,SafeAreaView,Button, TouchableOpacity, Image, ImageBackground, } from 'react-native';
 import React from "react";
 import { AntDesign, MaterialIcons, Entypo, FontAwesome5, FontAwesome,MaterialCommunityIcons,Ionicons, Feather, } from '@expo/vector-icons';
-import fo3 from '../assets/fo3.jpg';
+// import fo3 from '../assets/fo3.jpg';
 import { ScrollView } from 'react-native';
 
 
@@ -10,7 +10,8 @@ import { ScrollView } from 'react-native';
 const MoneyTransfer =(props)=>{
     return(
         
-        <ImageBackground source={fo3} style={styles.container}>
+         <ImageBackground style={styles.container}>   
+             {/* source={fo3} style={styles.container}> */}
         <ScrollView>
         <View  style={styles.container}>
             <View style={{flex:0.10,top: 40,}}>
@@ -76,7 +77,7 @@ const MoneyTransfer =(props)=>{
     </View>
 </View>
 
-<View style={{justifyContent:"center", alignItems:"center",   top:200,}}>
+<View style={{justifyContent:"center", alignItems:"center",   top:200, backgroundColor:"white",}}>
     <Text style={{fontSize: 30,}}>No Transaction</Text>
 </View>
 <View style={{ backgroundColor: "#8A39E1", width: "90%", height: 80,  borderRadius:50, flexDirection:"column", marginLeft:20, marginRight: 50,  top:350,}}>
@@ -107,6 +108,7 @@ const MoneyTransfer =(props)=>{
           flex: 10,
           height: null,
           width: null,
+          backgroundColor: "#e0ffff",
         },
 
         det2: {
@@ -130,74 +132,11 @@ const MoneyTransfer =(props)=>{
         },
 
 
-//     hippo: {
-//         // backgroundColor: "white",
-//         flex: 0.3,
-//         top: 10,
-//     },
-
-// all: {
-// justifyContent: "space-evenly",
-// flex: 0.6,
-// },
-
-//     hip: {
-//         backgroundColor: "#D5E986",
-//         flexDirection: "row",
-//        justifyContent: "space-between" ,
-        
-//     },
-//     hip1: {
-//         backgroundColor: "#D5E986",
-//         flexDirection: "row",
-//        justifyContent: "space-between"
-       
-        
-//     },
-//     hip2: {
-//         backgroundColor: "#D5E986",
-//         flexDirection: "row",
-//        justifyContent: "space-between" ,
-        
-        
-//     },
-//     hip3: {
-//         backgroundColor: "grey",
-//         flexDirection: "row",
-//        justifyContent: "space-between" ,
-        
-        
-//     },
-//     hip4: {
-//         backgroundColor: "#D5E986",
-//         flexDirection: "row",
-//        justifyContent: "space-between" ,   
-//     },
-//     hip5: {
-//         backgroundColor: "#D5E986",
-//         flexDirection: "row",
-//        justifyContent: "space-between" ,
-        
-        
-//     },
-
-//     image: {
-//         width: 400,
-//         height:200,
-//      },
-
-//      last:{
-// flexDirection:"row",
-// justifyContent:"space-between",
-// top: 50,
-//      },
-
-
-
 
 
 
 
 
         })
-          
+
+

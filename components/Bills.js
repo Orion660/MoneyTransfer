@@ -12,18 +12,6 @@ const Bills =(props)=>{
 <ScrollView  style={styles.container}>
 
 <View  style={styles.container}>
-{/* <View style={styles.indx}>
-            <Text style={{color: "'#c9c7c7", fontSize: 20, marginVertical: 2, marginRight: 20, marginLeft: 20,}}>
-           OTP Code:
-           </Text>
-           <TextInput style={{fontSize: 15, marginVertical: 12, borderBottomWidth: 1, marginRight: 20, marginLeft: 20,}}/>
-            </View>
-
-            <View style={styles.outerContainer}>
-     <TouchableOpacity style={styles.btn} onPress={()=>{props.navigation.navigate("Withdraw")}}>
-          <Text style={{ color: "white" }}>submit</Text>
-        </TouchableOpacity>
-        </View>  */}
 
 
 <View style={{ alignItems: "center",
@@ -57,7 +45,7 @@ export default Bills;
 const styles = StyleSheet.create({
 container: {
 flex: 10,
-//   backgroundColor: "white",
+ backgroundColor: "#e0ffff",
 height: null,
 width: null,
 },
@@ -102,3 +90,7 @@ width: null,
 
 
 });
+
+
+
+  

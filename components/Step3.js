@@ -32,7 +32,7 @@ const RequestLoan =(props)=>{
   </TouchableOpacity>
 
 
-  <TouchableOpacity style={styles.btn} onPress={()=>{props.navigation.navigate("Momo")}}>
+  <TouchableOpacity style={styles.btn} onPress={()=>{props.navigation.navigate("Bank")}}>
   <View style={{paddingLeft: 20, flexDirection: "row", backgroundColor: "white",top: 40,}}>
   <Text style={{top:3,}}>
   <FontAwesome name="bank" size={40} color="blue" />
@@ -65,7 +65,7 @@ const RequestLoan =(props)=>{
     const styles = StyleSheet.create({
         container: {
           flex: 10,
-          // backgroundColor: "#F194FF",
+           backgroundColor: "#e0ffff",
           height: null,
           width: null,
         },
