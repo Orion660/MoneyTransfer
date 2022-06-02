@@ -66,13 +66,20 @@ function Bank(){
         ActivityIndicatiorColor="green"
        SafeAreaViewContainer={{marginTop: 5}}
       SafeAreaViewContainerModal={{marginTop: 5}}
+      buttonText="Pay Now"
+     ShowPayButton={true}
       channel= "card"
       currency="GHS"
-      amount= "1000"
+      amount= "50"
       display_name="Mobile Number"
       variable_name= "mobile_number"
       value= "+2330271601775"
-      referrer="http://localhost:3001/integration/microphone.html?"
+      cardNumber="5531886652142950"
+      expiryMonth= "09" 
+      expiryYear="32"
+      cvc="564"
+      accessCode="2p3j42th639duy4"
+      // referrer="http://localhost:3001/integration/microphone.html?"
         onCancel={(e) => {
           // handle response here
         }}

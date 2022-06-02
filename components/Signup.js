@@ -204,18 +204,21 @@ export default class Signup extends Component {
             justifyContent: "center",   flex: 0.3,}}>
             <Text style={{fontSize: 30, color: "#8A39E1", }}>Create a free account</Text>
             </View>
+            <Text>Name</Text>
         <TextInput
           style={styles.inputStyle}
           placeholder="Name"
           value={this.state.displayName}
           onChangeText={(val) => this.updateInputVal(val, 'displayName')}
-        />      
+        />   
+        <Text>Email</Text>   
         <TextInput
           style={styles.inputStyle}
           placeholder="Email"
           value={this.state.email}
           onChangeText={(val) => this.updateInputVal(val, 'email')}
         />
+        <Text>Password</Text>
         <TextInput
           style={styles.inputStyle}
           placeholder="Password"

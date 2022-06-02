@@ -21,6 +21,8 @@ import Withdraw from './components/Withdraw';
 import Bills from './components/Bills';
 import Dashboard from './components/dashboard';
 import Bank from './components/Bank';
+import PaymentDone from './components/PaymentDone';
+import Succefull from './components/Succefull';
 
 
 
@@ -56,6 +58,8 @@ const App = (props) => {
          <Stack.Screen name="Bills" component={Bills} options={{headerShown:false}}/>
          <Stack.Screen name="Dashboard" component={Dashboard} options={{headerShown:false}}/>
          <Stack.Screen name="Bank" component={Bank} options={{headerShown:false}}/>
+         <Stack.Screen name="PaymentDone" component={PaymentDone} options={{headerShown:false}}/>
+         <Stack.Screen name="Succefull" component={Succefull} options={{headerShown:false}}/>
 
 
       

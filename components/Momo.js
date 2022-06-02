@@ -121,7 +121,7 @@ import {
   import { Paystack,paystack } from "react-native-paystack-webview";
   
   
-  const Momo =()=>{
+  const Momo =(props)=>{
     
     const transactionReference = (length) => {
       let arr =
@@ -140,7 +140,7 @@ import {
       tx_ref: transactionReference(10),
       authorization: "FLWPUBK_TEST-5970fb37bd85eabb80618fc36a983934-X",
       customer: {
-        email: "gabby@gmail.com",
+        email: "lovinaafrifa223344@gmail.com",
       },
       amount: 1000,
       currency: "GHS",
@@ -148,6 +148,7 @@ import {
     };
  const handleOnRedirect = (data) => {
      console.log(data);
+ props.navigation.navigate("PaymentDone");
  }
     return (
       <SafeAreaView style={styles.container}>
@@ -171,11 +172,7 @@ import {
                 AyobaMoneyTransfer
               </Text>
             </View>
-            {/* <Text
-              style={{ color: "blue", fontSize: 20, fontWeight: "bold", top: 15 }}
-            >
-              About
-            </Text> */}
+          
             <Text
               style={{ color: "blue", fontSize: 18, top: 20, color: "white" }}
             >
@@ -231,3 +228,111 @@ import {
       opacity: 0.8,
     },
   })
+
+
+
+
+// import {
+//   StyleSheet,
+//   Text,
+//   View,
+//   TextInput,
+//   TouchableOpacity,
+// } from "react-native";
+// import React, { useState } from "react";
+// import { PayWithFlutterwave } from "flutterwave-react-native";
+
+// import { Ionicons } from "@expo/vector-icons";
+// import { AntDesign } from "@expo/vector-icons";
+
+// const Momo = (props) => {
+//   const [amount, setAmount] = useState("");
+//   const handleOnRedirect = (data) => {
+//     console.log(data)
+//     props.navigation.navigate("PaymentDone");
+//   };
+//   return (
+//     <View style={styles.Container}>
+     
+//       <View style={styles.input}>
+//         <TextInput
+//           value={amount}
+//           onChangeText={(value) => setAmount(value)}
+//           style={{ color: "white", fontSize: 20, marginTop: 5 }}
+//           placeholder="Amount (GHS)"
+//         />
+//       </View>
+
+//       <View style={{}}>
+     
+
+//         <PayWithFlutterwave
+//           onRedirect={handleOnRedirect}
+//           options={{
+//             tx_ref: `tr-${Date.now()}`,
+            
+           
+//             authorization: "FLWPUBK_TEST-5970fb37bd85eabb80618fc36a983934-X",
+
+
+//             amount: +amount,
+//             currency: "GHS",
+//             customer: {
+//               email: "lovinaafrifa223344@gmail.com",
+//             },
+//             payment_options: "card",
+//           }}
+//           customButton={(props) => (
+//             <TouchableOpacity
+//               style={{
+//                 height: 60,
+//                 backgroundColor: "lightblue",
+//                 borderRadius: 30,
+//                 alignItems: "center",
+//                 justifyContent: "center",
+//                 marginTop: 100,
+//               }}
+//               onPress={props.onPress}
+//               isBusy={props.isInitializing}
+//               disabled={props.disabled}
+//             >
+//               <Text style={{ color: "#fff" }}>Pay</Text>
+//             </TouchableOpacity>
+//           )}
+//         />
+//       </View>
+//     </View>
+//   );
+// };
+
+// export default Momo;
+
+// const styles = StyleSheet.create({
+//   Container: {
+//     flex: 1,
+//     backgroundColor: "#2F393D",
+//   },
+
+//   Input: {
+//     marginTop: 200,
+//     paddingHorizontal: 30,
+//     borderWidth: 1,
+//     borderRadius: 15,
+//     height: 50,
+//     fontSize: 50,
+//     borderColor: "white",
+//     marginLeft: 10,
+//     marginRight: 10,
+//   },
+
+//   input: {
+//     marginTop: 50,
+//     paddingHorizontal: 30,
+//     borderWidth: 1,
+//     marginLeft: 10,
+//     marginRight: 10,
+//     height: 50,
+//     borderColor: "white",
+//     borderRadius: 15,
+//   },
+// });

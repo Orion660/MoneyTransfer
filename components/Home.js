@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,SafeAreaView,Button, TouchableOpacity, Image, ImageBackground, } from 'react-native';
 import React from "react";
 import { AntDesign, MaterialIcons, Entypo,FontAwesome5  } from '@expo/vector-icons';
-import fo3 from '../assets/fo3.jpg';
+
 
 
 
@@ -10,7 +10,7 @@ import fo3 from '../assets/fo3.jpg';
 
 const Home =(props)=>{
     return(
-        <ImageBackground source={fo3} style={styles.container}>
+        <ImageBackground style={styles.container}>
         <View  style={styles.container}>
             <View style={styles.name}>
 
@@ -31,7 +31,7 @@ const Home =(props)=>{
                 {/* <Text>
                 <AntDesign name="arrowright" size={24} color="white" />
                 </Text> */}
-                 <Text style={{ color: "black" }}>i have an account</Text>
+                 <Text style={{ color: "blue" }}>i have an account</Text>
                 </TouchableOpacity>
             </View>
 
@@ -59,9 +59,8 @@ const Home =(props)=>{
     const styles = StyleSheet.create({
         container: {
           flex: 10,
-           backgroundColor: "#e0ffff",
-            height: null,
-          width: null,
+        //    backgroundColor: "#e0ffff",
+           backgroundColor: "white",
           
 
 
