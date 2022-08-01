@@ -123,6 +123,8 @@ const Step2 =(props)=>{
                          backgroundColor: "#8A39E1",
                          top: 150,
                       },
+
+                    
                        
         
         
